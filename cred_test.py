@@ -1,5 +1,6 @@
 import unittest
 from cred import Cred
+
 ####### credential Class##########   
 ##############################################################
 #good instantiation test
@@ -51,7 +52,20 @@ class TestClasse2(unittest.TestCase):
         '''
         self.assertEqual(Cred.displayCred(),Cred.listCred)
 
+##############################################################
+#userPassword generator
+    def testPassWordGenerator(self):
+        '''
+        method that returns a randpm  password for credentials 
+        '''
+        self.newCred.passGenerator()
+        self.assertEqual(Cred.displayCred(),Cred.listCred)
+
+
 
 if __name__ == '__main__':
     unittest.main()     
        
+
+
+

@@ -1,3 +1,4 @@
+import random
 class Cred:
     
     listCred=[]  # user identity for creating a account
@@ -26,3 +27,15 @@ class Cred:
         method that returns the user list
         '''
         return cls.listCred
+
+##############################################################
+#userPassword generator
+    @classmethod
+    def passGenerator(cls):
+        '''
+        method that returns the a random password
+        '''
+        s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
+        passlen = 8
+        p =  "".join(random.sample(s,passlen ))
+        return p
