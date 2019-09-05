@@ -11,11 +11,18 @@ class Cred:
 
 #########################################################################
 # saving user credentials
-
+    
     def saveCred(self):
         '''
         saveCred method saves user objects into userCred
         '''
         Cred.listCred.append(self)
-        
 
+#########################################################################
+# display user credentials
+    @classmethod    
+    def displayCred(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.listCred

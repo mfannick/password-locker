@@ -43,6 +43,15 @@ class TestClasse2(unittest.TestCase):
         testCred.saveCred()
         self.assertEqual(len(Cred.listCred),2)
 
+##############################################################
+#displaying credentials
+    def testDisplayCred(self):
+        '''
+        method that returns a list of all user credentials 
+        '''
+        self.assertEqual(Cred.displayCred(),Cred.listCred)
+
+
 if __name__ == '__main__':
     unittest.main()     
        
