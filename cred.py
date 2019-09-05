@@ -10,12 +10,12 @@ class Cred:
         self.cWord=password
 
 #########################################################################
-# # saving user credentials
+# saving user credentials
 
-#     def saveCred(self):
-#         '''
-#         saveCred method saves user objects into userCred
-#         '''
-#         Cred.listCred.append(self)
+    def saveCred(self):
+        '''
+        saveCred method saves user objects into userCred
+        '''
+        Cred.listCred.append(self)
         
 
