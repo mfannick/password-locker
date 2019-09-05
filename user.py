@@ -2,7 +2,7 @@ class User:
     """
     Class that generates new instances of user identify for creating an account in the app
     """
-    userList = []  # user identity for creating a account
+    listUser = []  # user identity for creating a account
 #########################################################################
 # instantiation
     def __init__(self, firstName, lastName, userName, passWord):
@@ -19,7 +19,7 @@ class User:
         '''
         saveUser method saves user objects into userList
         '''
-        User.userList.append(self)
+        User.listUser.append(self)
 ##############################################################
 # display useridentities
     @classmethod
@@ -27,7 +27,7 @@ class User:
         '''
         method that returns the user list
         '''
-        return cls.userList
+        return cls.listUser
 
 # ##############################################################
 # saving multiple times
@@ -41,6 +41,6 @@ class User:
         Returns :
         Identity of person that matches the userName.
         '''
-        for user in cls.userList:
+        for user in cls.listUser:
             if user.uname == uname:
                 return user

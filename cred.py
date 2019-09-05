@@ -1,9 +1,21 @@
 class Cred:
     
-    userCred=[]  # user identity for creating a account
+    listCred=[]  # user identity for creating a account
+#########################################################################
+# instantiation
     def __init__(self,platform,userName,password):
         
         self.cForm=platform
         self.cName=userName
         self.cWord=password
+
+#########################################################################
+# # saving user credentials
+
+#     def saveCred(self):
+#         '''
+#         saveCred method saves user objects into userCred
+#         '''
+#         Cred.listCred.append(self)
         
+
