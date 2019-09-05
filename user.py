@@ -20,14 +20,14 @@ class User:
         saveUser method saves user objects into userList
         '''
         User.userList.append(self)
-# ##############################################################
-# # display useridentities
-#     @classmethod
-#     def displayUser(cls):
-#         '''
-#         method that returns the user list
-#         '''
-#         return cls.userList
+##############################################################
+# display useridentities
+    @classmethod
+    def displayUser(cls):
+        '''
+        method that returns the user list
+        '''
+        return cls.userList
 
 # ##############################################################
 # # saving multiple times
