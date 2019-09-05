@@ -2,7 +2,8 @@ import unittest
 from user import User
 
 
-class TestClasses(unittest.TestCase):
+
+class TestClasses1(unittest.TestCase):
 
     pass
     '''
@@ -72,6 +73,8 @@ class TestClasses(unittest.TestCase):
         testUser.saveUser()
         found_user= User.findByUserName("mfannick1")
         self.assertEqual(found_user.fname,testUser.fname)
+
+
        
 if __name__ == '__main__':
     unittest.main() 

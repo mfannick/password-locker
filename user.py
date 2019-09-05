@@ -30,17 +30,17 @@ class User:
         return cls.userList
 
 # ##############################################################
-# # saving multiple times
-#     @classmethod
-#     def findByUserName(cls, uname):
-#         '''
-#         Method that takes in a username and returns a user that matches that username.
+# saving multiple times
+    @classmethod
+    def findByUserName(cls, uname):
+        '''
+        Method that takes in a username and returns a user that matches that username.
 
-#         Args:
-#         number: userName to search for
-#         Returns :
-#         Identity of person that matches the userName.
-#         '''
-#         for user in cls.userList:
-#             if user.uname == uname:
-#                 return user
+        Args:
+        number: userName to search for
+        Returns :
+        Identity of person that matches the userName.
+        '''
+        for user in cls.userList:
+            if user.uname == uname:
+                return user
