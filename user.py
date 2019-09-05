@@ -13,13 +13,13 @@ class User:
         self.pword = passWord
 
 #########################################################################
-# # saving user identity
+# saving user identity
 
-#     def saveUser(self):
-#         '''
-#         saveUser method saves user objects into userList
-#         '''
-#         User.userList.append(self)
+    def saveUser(self):
+        '''
+        saveUser method saves user objects into userList
+        '''
+        User.userList.append(self)
 # ##############################################################
 # # display useridentities
 #     @classmethod
