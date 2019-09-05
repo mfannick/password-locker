@@ -27,15 +27,15 @@ class TestClasses(unittest.TestCase):
         self.assertEqual(self.newUser.uname,"mfannick")
         self.assertEqual(self.newUser.pword,"anny12")
 
-# ##############################################################
-# #saving test
-#     def testSaveUser(self):
-#         '''
-#         testSaveUser test case to test if the user object is saved into
-#         the user list
-#         '''
-#         self.newUser.saveUser()#saving the new user identity
-#         self.assertEqual(len(User.userList),1)
+##############################################################
+#saving test
+    def testSaveUser(self):
+        '''
+        testSaveUser test case to test if the user object is saved into
+        the user list
+        '''
+        self.newUser.saveUser()#saving the new user identity
+        self.assertEqual(len(User.userList),1)
 # ##############################################################
 # #display user identity 
 #     def testDisplayUser(self):
