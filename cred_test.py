@@ -24,6 +24,25 @@ class TestClasse2(unittest.TestCase):
         ''' 
         self.newCred.saveCred()
         self.assertEqual(len(Cred.listCred),1)
+
+##############################################################
+#saving multiple credentials
+    def tearDown(self):
+        '''
+        tearDown method that cleans up after each test case has run.
+        '''
+        Cred.listCred = []
+
+    def testSaveMultiCred(self):
+        '''
+        testSaveMultiUser test checks if we can save multiple user
+        objects to our userList
+        '''
+        self.newCred.saveCred()
+        testCred=Cred("hangout1","anny1","aabc@1")
+        testCred.saveCred()
+        self.assertEqual(len(Cred.listCred),2)
+
 if __name__ == '__main__':
     unittest.main()     
        

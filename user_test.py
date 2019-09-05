@@ -36,14 +36,14 @@ class TestClasses1(unittest.TestCase):
         the user list
         '''
         self.newUser.saveUser()#saving the new user identity
-        self.assertEqual(len(User.userList),1)
+        self.assertEqual(len(User.listUser),1)
 # ##############################################################
 #display user identity 
     def testDisplayUser(self):
         '''
         method that returns a list of all user identities 
         '''
-        self.assertEqual(User.displayUser(),User.userList)
+        self.assertEqual(User.displayUser(),User.listUser)
 
 # ##############################################################
 # setup and class creation up here
@@ -51,7 +51,7 @@ class TestClasses1(unittest.TestCase):
             '''
             tearDown method that cleans up after each test case has run.
             '''
-            User.userList = []
+            User.listUser = []
 #saving multiple times
     def testSaveMultiUser(self):
         '''
@@ -61,7 +61,7 @@ class TestClasses1(unittest.TestCase):
         self.newUser.saveUser()
         testUser= User("Annick1","Francine1","mfannick1","anny121")
         testUser.saveUser()
-        self.assertEqual(len(User.userList),2) 
+        self.assertEqual(len(User.listUser),2) 
 
         
 
