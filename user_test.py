@@ -37,12 +37,12 @@ class TestClasses(unittest.TestCase):
         self.newUser.saveUser()#saving the new user identity
         self.assertEqual(len(User.userList),1)
 # ##############################################################
-# #display user identity 
-#     def testDisplayUser(self):
-#         '''
-#         method that returns a list of all user identities 
-#         '''
-#         self.assertEqual(User.displayUser(),User.userList)
+#display user identity 
+    def testDisplayUser(self):
+        '''
+        method that returns a list of all user identities 
+        '''
+        self.assertEqual(User.displayUser(),User.userList)
 
 # ##############################################################
 # # setup and class creation up here
