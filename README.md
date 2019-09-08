@@ -1,4 +1,4 @@
-<!-- # password-locker
+# password-locker
   This is a python application for managing people's account passwords by keeping the name of the account,its username and password for future use as the more they are many the more it is not easy to remember all of them.Not only helping the user to store his account credentials this app also helps in generating a strong password anytime the user chooses when creating his accounts.
 
   ## setUp instruction
@@ -24,4 +24,4 @@
   ### MIT License and Copyright information
    
   [MIT](https://choosealicense.com/licenses/mit/)
-  Copyright &copy;2019 Annick-Francine-M -->
+  Copyright &copy;2019 Annick-Francine-M
