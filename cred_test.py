@@ -1,70 +1,102 @@
-import unittest
-from cred import Cred
+# import unittest
+# from cred import Cred
 
-####### credential Class##########   
-##############################################################
-#good instantiation test
-class TestClasse2(unittest.TestCase):
+# ####### credential Class##########   
+# ##############################################################
+# #good instantiation test
+# class TestClasse2(unittest.TestCase):
 
-    def setUp(self):
-        self.newCred=Cred("hangout","anny","aabc@")
-        '''
-        test_init test case to test if the object is initialized properly
-        '''  
-    def test2Init(self):
-        self.assertEqual(self.newCred.cForm,"hangout")
-        self.assertEqual(self.newCred.cName,"anny")  
-        self.assertEqual(self.newCred.cWord,"aabc@")
+#     def setUp(self):
+#         self.newCred=Cred("hangout","anny","aabc@")
+#         '''
+#         test_init test case to test if the object is initialized properly
+#         '''  
+#     def test2Init(self):
+#         self.assertEqual(self.newCred.cForm,"hangout")
+#         self.assertEqual(self.newCred.cName,"anny")  
+#         self.assertEqual(self.newCred.cWord,"aabc@")
 
-##############################################################
-#saving credentials
-    def testSaveCred(self):
-        '''
-        testSaveUser test case to test if the user object is saved into
-        the user list
-        ''' 
-        self.newCred.saveCred()
-        self.assertEqual(len(Cred.listCred),1)
+# ##############################################################
+# #saving credentials
+#     def testSaveCred(self):
+#         '''
+#         testSaveUser test case to test if the user object is saved into
+#         the user list
+#         ''' 
+#         self.newCred.saveCred()
+#         self.assertEqual(len(Cred.listCred),1)
 
-##############################################################
-#saving multiple credentials
-    def tearDown(self):
-        '''
-        tearDown method that cleans up after each test case has run.
-        '''
-        Cred.listCred = []
+# ##############################################################
+# #saving multiple credentials
+#     def tearDown(self):
+#         '''
+#         tearDown method that cleans up after each test case has run.
+#         '''
+#         Cred.listCred = []
 
-    def testSaveMultiCred(self):
-        '''
-        testSaveMultiUser test checks if we can save multiple user
-        objects to our userList
-        '''
-        self.newCred.saveCred()
-        testCred=Cred("hangout1","anny1","aabc@1")
-        testCred.saveCred()
-        self.assertEqual(len(Cred.listCred),2)
+#     def testSaveMultiCred(self):
+#         '''
+#         testSaveMultiUser test checks if we can save multiple user
+#         objects to our userList
+#         '''
+#         self.newCred.saveCred()
+#         testCred=Cred("hangout1","anny1","aabc@1")
+#         testCred.saveCred()
+#         self.assertEqual(len(Cred.listCred),2)
 
-##############################################################
-#displaying credentials
-    def testDisplayCred(self):
-        '''
-        method that returns a list of all user credentials 
-        '''
-        self.assertEqual(Cred.displayCred(),Cred.listCred)
+# ##############################################################
+# #displaying credentials
+#     def testDisplayCred(self):
+#         '''
+#         method that returns a list of all user credentials 
+#         '''
+#         self.assertEqual(Cred.displayCred(),Cred.listCred)
 
-##############################################################
-#userPassword generator
-    def testPassWordGenerator(self):
-        '''
-        method that returns a randpm  password for credentials 
-        '''
-        self.newCred.passGenerator()
-        self.assertEqual(Cred.displayCred(),Cred.listCred)
+# ##############################################################
+# #testing the user password by finding it
+#     def testFindCredCForm(self):
+#          self.newCred.saveCred()
+#          testCred=Cred("hangout1","anny1","aabc@1")
+#          testCred.saveCred()
+#          findCForm=Cred.findCredCform('hangout1')
+#          self.assertEqual(findCForm,'hangout1')
+# # ##############################################################
+# #testing the user password by checking if it already exits
+
+#     def testCheckCredCForm(self):
+#          self.newCred.saveCred()
+#          testCred=Cred("hangout1","anny1","aabc@1")
+#          testCred.saveCred()
+#          existCForm=Cred.checkCform('hangout1')
+#          self.assertTrue(existCForm)
+# # #userPassword generator
+# #     def testPassWordGenerator(self):
+# #         '''
+# #         method that returns a randpm  password for credentials 
+# #         '''
+# #         self.newCred.passGenerator()
+# #         self.assertEqual(Cred.displayCred(),Cred.listCred)
+   
+# ##############################################################
+# # Delete test
+#     def test_delete_contact(self):
+#             '''
+#             test_delete_contact to test if we can remove a contact from our contact list
+#             '''
+#             self.newCred.saveCred()
+#             testCred=Cred("hangout1","anny1","aabc@1")
+#             testCred.saveCred()
+
+#             self.newCred.deleteCred()# Deleting a credential object
+#             self.assertEqual(len(Cred.listCred),1)
+
+
+    
 
 
 
-if __name__ == '__main__':
-    unittest.main()     
+# if __name__ == '__main__':
+#     unittest.main()     
        
 
 

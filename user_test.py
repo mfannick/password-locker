@@ -73,6 +73,62 @@ class TestClasses1(unittest.TestCase):
         testUser.saveUser()
         found_user= User.findByUserName("mfannick1")
         self.assertEqual(found_user.fname,testUser.fname)
+# ##############################################################
+#testing the user password by finding it
+    def testFindUserUname(self):
+        self.newUser.saveUser()
+        testUser=User("Annick1","Francine1","mfannick1","anny121")
+        testUser.saveUser()
+        findUword=User.findUserUname('mfannick1')
+        self.assertEqual(findUword,'mfannick1')
+# ##############################################################
+#testing the user password by checking if it already exits
+
+    def testCheckUname(self):
+        self.newUser.saveUser()
+        testUser=User("Annick1","Francine1","mfannick1","anny121")
+        testUser.saveUser()
+        existUname=User.checkUname('mfannick1')
+        self.assertTrue(existUname)
+# ##############################################################
+#testing the user password by finding it
+    def testFindUserPWord(self):
+        self.newUser.saveUser()
+        testUser=User("Annick1","Francine1","mfannick1","anny121")
+        testUser.saveUser()
+        findPword=User.findUserPword('anny121')
+        self.assertEqual(findPword,'anny121')
+
+# ##############################################################
+#testing the user password by checking if it already exits
+
+    def testCheckPWord(self):
+        self.newUser.saveUser()
+        testUser=User("Annick1","Francine1","mfannick1","anny121")
+        testUser.saveUser()
+        existPword=User.checkPWord('anny121')
+        self.assertTrue(existPword)
+# ##############################################################
+
+
+######login
+# #testing the user username by finding it login
+#     def testFindUserUnamelog(self):
+#         self.newUser.saveUser()
+#         testUser=User("Annick1","Francine1","mfannick1","anny121")
+#         testUser.saveUser()
+#         findUwordlog=User.findUserUnamelog('mfannick1')
+#         self.assertEqual(findUwordlog,self.newUser.uname)
+# # ##############################################################
+# #testing the user userName by checking if it already exits
+
+#     def testCheckUnamelog(self):
+#         self.newUser.saveUser()
+#         testUser=User("Annick1","Francine1","mfannick1","anny121")
+#         testUser.saveUser()
+#         existUnamelog=User.checkUnamelog('mfannick1')
+#         self.assertEqual(existUnamelog,self.newUser.uname)
+
 
 
        

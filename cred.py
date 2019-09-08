@@ -1,18 +1,20 @@
 import random
+
+
 class Cred:
-    
-    listCred=[]  # user identity for creating a account
+
+    listCred = []  # user identity for creating a account
 #########################################################################
 # instantiation
-    def __init__(self,platform,userName,password):
-        
-        self.cForm=platform
-        self.cName=userName
-        self.cWord=password
+    def __init__(self, platform, userName, password):
+
+        self.cForm = platform
+        self.cName = userName
+        self.cWord = password
 
 #########################################################################
 # saving user credentials
-    
+
     def saveCred(self):
         '''
         saveCred method saves user objects into userCred
@@ -21,7 +23,7 @@ class Cred:
 
 #########################################################################
 # display user credentials
-    @classmethod    
+    @classmethod
     def displayCred(cls):
         '''
         method that returns the user list
@@ -29,13 +31,33 @@ class Cred:
         return cls.listCred
 
 ##############################################################
-#userPassword generator
+# finding the user username
     @classmethod
-    def passGenerator(cls):
+    def findCredCform(cls, cForm):
         '''
-        method that returns the a random password
+       Method that takes in a number and returns a contact that matches that number.
+
+       Args:
+           number: Phone number to search for
+       Returns :
+           Contact of person that matches the number.
+       '''
+        for cred in cls.listCred:
+            if cred.cForm == cForm:
+                return cred.cForm
+
+# ##############################################################
+# checking the user username
+    @classmethod
+    def checkCform(cls, cForm):
+        for cred in cls.listCred:
+            if cred.cForm == cForm:
+                return True
+        return False
+
+    def deleteCred(self):
         '''
-        s = "abcdefghijklmnopqrstuvwxyz01234567890ABCDEFGHIJKLMNOPQRSTUVWXYZ!@#$%^&*()?"
-        passlen = 8
-        p =  "".join(random.sample(s,passlen ))
-        return p
+        delete_contact method deletes a saved contact from the contact_list
+        '''
+
+        Cred.listCred.remove(self)
