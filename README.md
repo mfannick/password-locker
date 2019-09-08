@@ -5,12 +5,18 @@
 
 
 
-     | Required| Description| How to run|
+     <!-- | Required| Description| How to run|
      | -----| ---|---|
      | A user must create an account first| S/he can add his/her credentials| How to run|
      | S/he must login to access his credentials| create new credential| The project is run using the terminal|
      ||display credentials and ||                        
-     ||delete credentials      ||                         
+     ||delete credentials      ||      -->
+
+     |  Required 	| Description 	| How to run 	|  
+     |---	|---	|---	|
+     |A user must create an account first  	|/he can add his/her credentials  	| The project is run using the terminal 	| 
+     | S/he must login to access his credentials 	|create new credential  	|  	|
+     | display credentials and delete credentials 	|  	|  	|                    
 
    ### Technologies used
 
