@@ -3,7 +3,7 @@
 
   ## setUp instruction
 
-     | Required                                   | Description                      |  How to run                           |   |   |
+     | Required                                   | Description                      |  How to run                          |
      |--------------------------------------------|----------------------------------|--------------------------------------|
      | A user must create an account              | S/he can add his/her credentials | The project is run using the terminal|
      | S/he must login to access his credentials  | create new credential            |                                      |
