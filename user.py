@@ -50,12 +50,8 @@ class User:
     @classmethod
     def findUserUname(cls, uname):
          '''
-        Method that takes in a number and returns a contact that matches that number.
+        Method that takes in a number and returns a user that matches that username.
 
-        Args:
-            number: Phone number to search for
-        Returns :
-            Contact of person that matches the number.
         '''
          for user in cls.listUser:
             if user.uname == uname:
@@ -65,6 +61,10 @@ class User:
 #checking the user username
     @classmethod
     def checkUname(cls, uname):
+        '''
+        Method that takes in a  username and returns a boolean.
+
+        '''
         for user in cls.listUser:
             if user.uname == uname:
                 return True
@@ -74,12 +74,12 @@ class User:
     @classmethod
     def findUserPword(cls,pword):
          '''
-        Method that takes in a number and returns a contact that matches that number.
+        Method that takes in a password and returns a user that matches that password.
 
         Args:
-            number: Phone number to search for
+            password: password to search for
         Returns :
-            Contact of person that matches the number.
+            user that matches the password.
         '''
          for user in cls.listUser:
             if user.pword == pword:
@@ -89,38 +89,11 @@ class User:
 #checking the user password
     @classmethod
     def checkPWord(cls, pword):
+        '''
+        Method that takes in a  password and returns a boolean.
+
+        '''
         for user in cls.listUser:
             if user.pword == pword:
                 return True
         return False
-# ################# login
-# #finding the user username
-#     @classmethod
-#     def findUserUnamelog(cls, username):
-#          '''
-#         Method that takes in a number and returns a contact that matches that number.
-
-#         Args:
-#             number: Phone number to search for
-#         Returns :
-#             Contact of person that matches the number.
-#         '''
-#          for user in cls.listUser:
-#             if User.listUser[username] == user.username:
-#                 return User.listUser[username]
-
-# # ##############################################################
-# #checking the user username match for login
-#     @classmethod
-#     def checkUnamelog(cls, username):
-#         for user in cls.listUser:
-#             if User.listUser[username] == user.userName:
-#                 return True
-#         return False
-#         #   for user in cls.listUser:
-#         #     if user.username == User.listUser[username]:
-#         #         return True
-#         # return False
-       
-
-        

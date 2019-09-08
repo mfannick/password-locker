@@ -15,7 +15,7 @@ class Cred:
     
     def saveCred(self):
         '''
-        saveCred method saves user objects into userCred
+        saveCred method saves credential objects into userCred
         '''
         Cred.listCred.append(self)
 
@@ -24,7 +24,7 @@ class Cred:
     @classmethod    
     def displayCred(cls):
         '''
-        method that returns the user list
+        method that returns the credential list
         '''
         return cls.listCred
 
@@ -33,12 +33,12 @@ class Cred:
     @classmethod
     def findCredCform(cls, cForm):
          '''
-        Method that takes in a number and returns a contact that matches that number.
+        Method that takes in a platform name and returns a credential that matches that platform.
 
         Args:
-            number: Phone number to search for
+             platform to search for
         Returns :
-            Contact of person that matches the number.
+            Credential that matches the platform.
         '''
          for cred in cls.listCred:
             if cred.cForm == cForm:
@@ -55,7 +55,7 @@ class Cred:
 
     def deleteCred(self):
         '''
-        delete_contact method deletes a saved contact from the contact_list
+        deletecred method deletes a saved contact from the credential list
         '''
 
         Cred.listCred.remove(self)

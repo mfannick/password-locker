@@ -36,7 +36,7 @@ class TestClasse2(unittest.TestCase):
 
     def testSaveMultiCred(self):
         '''
-        testSaveMultiUser test checks if we can save multiple user
+        testSaveMultiUser test checks if we can save multiple credential
         objects to our userList
         '''
         self.newCred.saveCred()
@@ -55,6 +55,9 @@ class TestClasse2(unittest.TestCase):
 ##############################################################
 #testing the user password by finding it
     def testFindCredCForm(self):
+         '''
+         test to check if we can find a credential by platform
+         '''
          self.newCred.saveCred()
          testCred=Cred("hangout1","anny1","aabc@1")
          testCred.saveCred()
@@ -64,24 +67,20 @@ class TestClasse2(unittest.TestCase):
 #testing the user password by checking if it already exits
 
     def testCheckCredCForm(self):
+         '''
+         test to check if we can return a Boolean  if we cannot find the platform.
+         '''
          self.newCred.saveCred()
          testCred=Cred("hangout1","anny1","aabc@1")
          testCred.saveCred()
          existCForm=Cred.checkCform('hangout1')
          self.assertTrue(existCForm)
-# #userPassword generator
-#     def testPassWordGenerator(self):
-#         '''
-#         method that returns a randpm  password for credentials 
-#         '''
-#         self.newCred.passGenerator()
-#         self.assertEqual(Cred.displayCred(),Cred.listCred)
-   
+
 ##############################################################
 # Delete test
     def test_delete_contact(self):
             '''
-            test_delete_contact to test if we can remove a contact from our contact list
+            test_deleteCred to test if we can remove a credential from our credential list
             '''
             self.newCred.saveCred()
             testCred=Cred("hangout1","anny1","aabc@1")

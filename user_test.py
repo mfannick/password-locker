@@ -68,6 +68,9 @@ class TestClasses1(unittest.TestCase):
 # ##############################################################
 #searching user identity  
     def testFindUserByUserName(self):
+        '''
+        test to check if we can find a user by username 
+        '''
         self.newUser.saveUser()
         testUser=User("Annick1","Francine1","mfannick1","anny121")
         testUser.saveUser()
@@ -76,6 +79,9 @@ class TestClasses1(unittest.TestCase):
 # ##############################################################
 #testing the user password by finding it
     def testFindUserUname(self):
+        '''
+        test to check same usernames
+        '''
         self.newUser.saveUser()
         testUser=User("Annick1","Francine1","mfannick1","anny121")
         testUser.saveUser()
@@ -85,6 +91,9 @@ class TestClasses1(unittest.TestCase):
 #testing the user password by checking if it already exits
 
     def testCheckUname(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the username.
+        '''
         self.newUser.saveUser()
         testUser=User("Annick1","Francine1","mfannick1","anny121")
         testUser.saveUser()
@@ -93,6 +102,9 @@ class TestClasses1(unittest.TestCase):
 # ##############################################################
 #testing the user password by finding it
     def testFindUserPWord(self):
+        '''
+        test to check same passwords
+        '''
         self.newUser.saveUser()
         testUser=User("Annick1","Francine1","mfannick1","anny121")
         testUser.saveUser()
@@ -103,31 +115,15 @@ class TestClasses1(unittest.TestCase):
 #testing the user password by checking if it already exits
 
     def testCheckPWord(self):
+        '''
+        test to check if we can return a Boolean  if we cannot find the password.
+        '''
         self.newUser.saveUser()
         testUser=User("Annick1","Francine1","mfannick1","anny121")
         testUser.saveUser()
         existPword=User.checkPWord('anny121')
         self.assertTrue(existPword)
-# ##############################################################
-
-
-######login
-# #testing the user username by finding it login
-#     def testFindUserUnamelog(self):
-#         self.newUser.saveUser()
-#         testUser=User("Annick1","Francine1","mfannick1","anny121")
-#         testUser.saveUser()
-#         findUwordlog=User.findUserUnamelog('mfannick1')
-#         self.assertEqual(findUwordlog,self.newUser.uname)
-# # ##############################################################
-# #testing the user userName by checking if it already exits
-
-#     def testCheckUnamelog(self):
-#         self.newUser.saveUser()
-#         testUser=User("Annick1","Francine1","mfannick1","anny121")
-#         testUser.saveUser()
-#         existUnamelog=User.checkUnamelog('mfannick1')
-#         self.assertEqual(existUnamelog,self.newUser.uname)
+        self.assertEqual(existPword,self.newUser.uname)
 
 
 
