@@ -4,10 +4,10 @@
   ## setUp instruction
 
      | Required                                   | Description                      |  How to run                           |   |   |
-|--------------------------------------------|----------------------------------|---------------------------------------|---|---|
-| A user must create an account              | S/he can add his/her credentials | The project is run using the terminal |   |   |
-| S/he must login to access his credentials  | create new credential            |                                       |   |   |
-| display credentials and delete credentials |                                  |                                       |   |   |                 
+     |--------------------------------------------|----------------------------------|--------------------------------------|
+     | A user must create an account              | S/he can add his/her credentials | The project is run using the terminal|
+     | S/he must login to access his credentials  | create new credential            |                                      |
+     | display credentials and delete credentials |                                  |                                      |                  
 
    ### Technologies used
 
