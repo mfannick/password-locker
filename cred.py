@@ -40,9 +40,9 @@ class Cred:
         Returns :
             Credential that matches the platform.
         '''
-         for cred in cls.listCred:
-            if cred.cForm == cForm:
-                return cred.cForm
+         for Cred in cls.listCred:
+            if Cred.cForm == cForm:
+                return Cred
 
 # ##############################################################
 #checking the user username

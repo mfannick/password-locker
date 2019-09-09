@@ -185,10 +185,10 @@ def main():
                             elif shortCode1 == 'del':
                                 print('enter the username of the platform you want to delete')
                                 platF = input()
-                                if checkByCform(platF):
+                                if findUserByCform(platF):
                                     search_platF = findUserByCform(platF)
                                     for cred in displayCreds():
-                                         print(f"{search_platF.cName}, {search_platF.cWord}")
+                                        #  print(f"{search_platF.cName}, {search_platF.cWord}")
                                          y="yes"
                                          print('do u realy want to delete it yes - yes.no - no')
                                          inputs=input()
